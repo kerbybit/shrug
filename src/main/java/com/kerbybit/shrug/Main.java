@@ -9,9 +9,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-import java.nio.charset.Charset;
-
-@Mod(modid = "shrug", name="\u203E\\_(\u30C4)_/\u203E", version="1.0")
+@Mod(modid = "shrug", name="\u203E\\_(\u30C4)_/\u203E", version="1.1")
 public class Main extends CommandBase {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
@@ -21,9 +19,12 @@ public class Main extends CommandBase {
     }
 
     public void processCommand(ICommandSender sender, String[] args) {
-        String shrug = "\u203E\\_(\u30C4)_/\u203E";
-        Charset.forName("UTF-8").encode(shrug);
-        Minecraft.getMinecraft().thePlayer.sendChatMessage(shrug);
+        String shrug = "";
+        for (String arg : args) {
+            shrug += " " + arg;
+        }
+        shrug += " \u203E\\_(\u30C4)_/\u203E";
+        Minecraft.getMinecraft().thePlayer.sendChatMessage(shrug.trim());
     }
 
     public String getCommandUsage(ICommandSender sender) {
