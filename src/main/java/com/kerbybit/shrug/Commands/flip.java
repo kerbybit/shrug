@@ -1,12 +1,9 @@
-package com.kerbybit.shrug;
+package com.kerbybit.shrug.Commands;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 
-/**
- * Created in ${PACKAGE} by Axiom on 2/16/2017.
- */
 public class flip extends CommandBase {
     public void processCommand(ICommandSender sender, String[] args) {
         String flip = "(\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 ";

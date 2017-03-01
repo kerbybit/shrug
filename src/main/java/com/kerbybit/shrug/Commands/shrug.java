@@ -1,12 +1,9 @@
-package com.kerbybit.shrug;
+package com.kerbybit.shrug.Commands;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 
-/**
- * Created in ${PACKAGE} by Axiom on 2/16/2017.
- */
 public class shrug extends CommandBase {
     public void processCommand(ICommandSender sender, String[] args) {
         String shrug = "";
