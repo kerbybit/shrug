@@ -6,12 +6,12 @@ import net.minecraft.command.ICommandSender;
 
 public class shrug extends CommandBase {
     public void processCommand(ICommandSender sender, String[] args) {
-        String shrug = "";
+        StringBuilder shrug = new StringBuilder();
         for (String arg : args) {
-            shrug += " " + arg;
+            shrug.append(" ").append(arg);
         }
-        shrug += " \u203E\\_(\u30C4)_/\u203E";
-        Minecraft.getMinecraft().thePlayer.sendChatMessage(shrug.trim());
+        shrug.append(" \u203E\\_(\u30C4)_/\u203E");
+        Minecraft.getMinecraft().thePlayer.sendChatMessage(shrug.toString().trim());
     }
 
     public String getCommandUsage(ICommandSender sender) {

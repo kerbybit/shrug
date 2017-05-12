@@ -1,9 +1,7 @@
 package com.kerbybit.shrug;
 
-import com.kerbybit.shrug.Commands.excuse;
-import com.kerbybit.shrug.Commands.excuses;
-import com.kerbybit.shrug.Commands.flip;
-import com.kerbybit.shrug.Commands.shrug;
+import com.kerbybit.shrug.Commands.*;
+import com.kerbybit.shrug.Commands.Hypixel.*;
 import net.minecraft.command.CommandBase;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,7 +15,9 @@ public class Main {
     public void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
         FMLCommonHandler.instance().bus().register(this);
-        registerCommands(new shrug(), new flip(), new excuse(), new excuses());
+        registerCommands(new shrug(), new flip(), new excuse(), new excuses(),
+                new pc(), new gc(), new s(),
+                new cp(), new cg(), new ca());
 
         FileHandler.loadFiles();
     }

@@ -10,12 +10,11 @@ public class flip extends CommandBase {
         if (args.length == 0) {
             flip += "\u253B\u2501\u253B";
         } else {
-            String flipped = "";
+            StringBuilder flipped = new StringBuilder();
             for (String value : args) {
-                flipped += value + " ";
+                flipped.append(value).append(" ");
             }
-            flipped = flip(flipped);
-            flip += flipped;
+            flip += flipString(flipped.toString());
         }
         Minecraft.getMinecraft().thePlayer.sendChatMessage(flip.trim());
     }
@@ -32,179 +31,179 @@ public class flip extends CommandBase {
         return 0;
     }
 
-    private String flip(String flip) {
-        String flipped = "";
+    private String flipString(String flip) {
+        StringBuilder flipped = new StringBuilder();
         char[] chars = flip.toCharArray();
         for (char value : chars) {
             switch (value) {
                 case ('A'):
-                    flipped = '\u2200' + flipped;
+                    flipped = flipped.append('\u2200');
                     break;
                 case ('B'):
                 case ('b'):
-                    flipped = 'q' + flipped;
+                    flipped = flipped.append('q');
                     break;
                 case ('C'):
-                    flipped = '\u0186' + flipped;
+                    flipped = flipped.append('\u0186');
                     break;
                 case ('D'):
                 case ('d'):
-                    flipped = 'p' + flipped;
+                    flipped = flipped.append('p');
                     break;
                 case ('E'):
-                    flipped = '\u018E' + flipped;
+                    flipped = flipped.append('\u018E');
                     break;
                 case ('F'):
-                    flipped = '\u2132' + flipped;
+                    flipped = flipped.append('\u2132');
                     break;
                 case ('G'):
-                    flipped = '\u05E4' + flipped;
+                    flipped = flipped.append('\u05E4');
                     break;
                 case ('J'):
-                    flipped = '\u017F' + flipped;
+                    flipped = flipped.append('\u017F');
                     break;
                 case ('K'):
                 case ('k'):
-                    flipped = '\u029E' + flipped;
+                    flipped = flipped.append('\u029E');
                     break;
                 case ('L'):
-                    flipped = '\u02E5' + flipped;
+                    flipped = flipped.append('\u02E5');
                     break;
                 case ('M'):
-                    flipped = 'W' + flipped;
+                    flipped = flipped.append('W');
                     break;
                 case ('P'):
-                    flipped = '\u0500' + flipped;
+                    flipped = flipped.append('\u0500');
                     break;
                 case ('R'):
-                    flipped = '\u1D1A' + flipped;
+                    flipped = flipped.append('\u1D1A');
                     break;
                 case ('T'):
-                    flipped = '\u22A5' + flipped;
+                    flipped = flipped.append('\u22A5');
                     break;
                 case ('U'):
-                    flipped = '\u2229' + flipped;
+                    flipped = flipped.append('\u2229');
                     break;
                 case ('V'):
-                    flipped = '\u039B' + flipped;
+                    flipped = flipped.append('\u039B');
                     break;
                 case ('W'):
-                    flipped = 'M' + flipped;
+                    flipped = flipped.append('M');
                     break;
                 case ('Y'):
-                    flipped = '\u2144' + flipped;
+                    flipped = flipped.append('\u2144');
                     break;
 
                 case ('a'):
-                    flipped = '\u0250' + flipped;
+                    flipped = flipped.append('\u0250');
                     break;
                 case ('c'):
-                    flipped = '\u0254' + flipped;
+                    flipped = flipped.append('\u0254');
                     break;
                 case ('e'):
-                    flipped = '\u01DD' + flipped;
+                    flipped = flipped.append('\u01DD');
                     break;
                 case ('f'):
-                    flipped = '\u025F' + flipped;
+                    flipped = flipped.append('\u025F');
                     break;
                 case ('g'):
-                    flipped = '\u0183' + flipped;
+                    flipped = flipped.append('\u0183');
                     break;
                 case ('h'):
-                    flipped = '\u0265' + flipped;
+                    flipped = flipped.append('\u0265');
                     break;
                 case ('i'):
-                    flipped = '\u1d09' + flipped;
+                    flipped = flipped.append('\u1d09');
                     break;
                 case ('j'):
-                    flipped = '\u027E' + flipped;
+                    flipped = flipped.append('\u027E');
                     break;
                 case ('m'):
-                    flipped = '\u026F' + flipped;
+                    flipped = flipped.append('\u026F');
                     break;
                 case ('n'):
-                    flipped = 'u' + flipped;
+                    flipped = flipped.append('u');
                     break;
                 case ('p'):
-                    flipped = 'd' + flipped;
+                    flipped = flipped.append('d');
                     break;
                 case ('q'):
-                    flipped = 'b' + flipped;
+                    flipped = flipped.append('b');
                     break;
                 case ('r'):
-                    flipped = '\u0279' + flipped;
+                    flipped = flipped.append('\u0279');
                     break;
                 case ('t'):
-                    flipped = '\u0287' + flipped;
+                    flipped = flipped.append('\u0287');
                     break;
                 case ('u'):
-                    flipped = 'n' + flipped;
+                    flipped = flipped.append('n');
                     break;
                 case ('v'):
-                    flipped = '\u028C' + flipped;
+                    flipped = flipped.append('\u028C');
                     break;
                 case ('w'):
-                    flipped = '\u028D' + flipped;
+                    flipped = flipped.append('\u028D');
                     break;
                 case ('y'):
-                    flipped = '\u028E' + flipped;
+                    flipped = flipped.append('\u028E');
                     break;
 
                 case ('1'):
-                    flipped = '\u0196' + flipped;
+                    flipped = flipped.append('\u0196');
                     break;
                 case ('2'):
-                    flipped = '\u1105' + flipped;
+                    flipped = flipped.append('\u1105');
                     break;
                 case ('3'):
-                    flipped = '\u0190' + flipped;
+                    flipped = flipped.append('\u0190');
                     break;
                 case ('4'):
-                    flipped = '\u3123' + flipped;
+                    flipped = flipped.append('\u3123');
                     break;
                 case ('5'):
-                    flipped = '\u03DB' + flipped;
+                    flipped = flipped.append('\u03DB');
                     break;
                 case ('6'):
-                    flipped = '9' + flipped;
+                    flipped = flipped.append('9');
                     break;
                 case ('7'):
-                    flipped = '\u3125' + flipped;
+                    flipped = flipped.append('\u3125');
                     break;
                 case ('9'):
-                    flipped = '6' + flipped;
+                    flipped = flipped.append('6');
                     break;
 
                 case ('.'):
-                    flipped = '\u02D9' + flipped;
+                    flipped = flipped.append('\u02D9');
                     break;
                 case (','):
-                    flipped = '\'' + flipped;
+                    flipped = flipped.append('\'');
                     break;
                 case ('\''):
-                    flipped = ',' + flipped;
+                    flipped = flipped.append(',');
                     break;
                 case ('`'):
-                    flipped = ',' + flipped;
+                    flipped = flipped.append(',');
                     break;
                 case ('&'):
-                    flipped = '\u214B' + flipped;
+                    flipped = flipped.append('\u214B');
                     break;
                 case ('_'):
-                    flipped = '\u203E' + flipped;
+                    flipped = flipped.append('\u203E');
                     break;
                 case ('?'):
-                    flipped = '\u00BF' + flipped;
+                    flipped = flipped.append('\u00BF');
                     break;
                 case ('!'):
-                    flipped = '\u00A1' + flipped;
+                    flipped = flipped.append('\u00A1');
                     break;
 
                 default:
-                    flipped = value + flipped;
+                    flipped = flipped.append(value);
                     break;
             }
         }
-        return flipped;
+        return flipped.reverse().toString();
     }
 }
